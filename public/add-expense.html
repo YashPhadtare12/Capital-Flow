@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Expense - Capital Flow</title>
+    <link rel="stylesheet" href="styles/modern.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="scripts/add-expense.js" defer></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <a href="index.html" class="logo">Capital Flow</a>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="add-expense.html" class="active">Add Expense</a></li>
+            <li><a href="view-expense.html">View Expenses</a></li>
+            <li><a href="login.html">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="form-container">
+        <h2>Add a New Expense</h2>
+        <form id="expense-form">
+          <div class="form-group">
+            <label for="expense">Expense Name</label>
+            <input
+              type="text"
+              id="expense"
+              placeholder="e.g., Coffee"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" required>
+              <option value="">Select a category</option>
+              <option value="Food">Food</option>
+              <option value="Rent">Rent</option>
+              <option value="Education">Education</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Miscellaneous">Miscellaneous</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="amount">Amount (₹)</label>
+            <input
+              type="number"
+              id="amount"
+              placeholder="e.g., 150"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" required />
+          </div>
+          <div class="form-group">
+            <label for="time">Time</label>
+            <input type="time" id="time" required />
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit">
+            Add Expense
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <p>&copy; 2024 Capital Flow. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
